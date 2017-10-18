@@ -11,9 +11,13 @@ convert_decimal_time(days = 0, hours = 0)
 
 \item{hours}{Number of hours, must be numeric and non-negative}
 }
+\value{
+A named list of day, hour, and minute amounts for the decimal time
+        given. Will also print this to the console.
+}
 \description{
-This function allows for easy conversion of time give as decimals to days, 
-minutes, and hours. Useful for switching between different modes of tracking 
+This function allows for easy conversion of time give as decimals to days,
+minutes, and hours. Useful for switching between different modes of tracking
 time.
 }
 \examples{
