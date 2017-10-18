@@ -3,3 +3,5 @@
 export(convert_decimal_time)
 export(gm_mean)
 export(hm_mean)
+export(install_new_pkgs)
+export(write_R_pkg_list)
