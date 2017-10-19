@@ -75,8 +75,8 @@ write_R_pkg_list <- function(tools_dir = NULL) {
                 setwd(tools_dir)
         } else {
                 ifelse("Linux" %in% Sys.info(),
-                       setwd("/home/rstudio/tools/"),
-                       setwd("~/github/tools/"))
+                       setwd("/home/rstudio/HBHtools/"),
+                       setwd("~/github/HBHtools/"))
         }
 
         ref_pkgs <- data.table::fread("HBH_R_pkgs.csv")
