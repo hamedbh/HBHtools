@@ -79,10 +79,10 @@ write_R_pkg_list <- function(tools_dir = NULL) {
                        setwd("~/github/tools/"))
         }
 
-        ref_pkgs <- fread("HBH_R_pkgs.csv")
+        ref_pkgs <- data.table::fread("HBH_R_pkgs.csv")
 
-        bound_pkgs <- rbindlist(list(new_pkgs, ref_pkgs))
-        setorder(bound_pkgs, Package, Version)
+        bound_pkgs <- data.table::rbindlist(list(new_pkgs, ref_pkgs))
+        data.table::setorder(bound_pkgs, Package, Version)
         merged_pkgs <- bound_pkgs[bound_pkgs[,
                                              .I[1],
                                              by = Package]$V1
@@ -93,6 +93,6 @@ write_R_pkg_list <- function(tools_dir = NULL) {
                                              "_",
                                              length(list.files("pkg_lists/")) + 1,
                                              ".csv"))
-        write_csv(merged_pkgs, "HBH_R_pkgs.csv")
+        data.table::fwrite(merged_pkgs, "HBH_R_pkgs.csv")
 
 }
