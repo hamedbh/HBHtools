@@ -11,13 +11,13 @@
 #' @export
 #' @examples
 #' convert_decimal_time(days = 3, hours = 2.5)
-#' [1] "Total time is 3 days, 2 hours, and 30 minutes."
+#' "Total time is 3 days, 2 hours, and 30 minutes."
 #'
 #' convert_decimal_time(days = 1.5)
-#' [1] "Total time is 1 days, 3 hours, and 42 minutes."
+#' "Total time is 1 days, 3 hours, and 42 minutes."
 #'
 #' convert_decimal_time(hours = 6.25)
-#' [1] "Total time is 0 days, 6 hours, and 15 minutes."
+#' "Total time is 0 days, 6 hours, and 15 minutes."
 
 convert_decimal_time <- function(days = 0, hours = 0.0) {
         full_days <- 0L
